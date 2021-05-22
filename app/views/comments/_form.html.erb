@@ -1,0 +1,19 @@
+<%= form_with model: [ @article, @article.comments.build ] do |form| %>
+    <p>
+      <%= form.label :student %><br>
+      <%= form.text_field :commenter %>
+    </p>
+    <p>
+      <%= form.label :Details %><br>
+      <%= form.text_area :body %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+    <p>
+      <%= form.label :status %><br>
+      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+   </p>
+
+  <% end %>
+  

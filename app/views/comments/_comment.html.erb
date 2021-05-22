@@ -1,0 +1,16 @@
+<p>
+  <strong>Student:</strong>
+  <%= comment.commenter %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= comment.body %>
+</p>  
+
+
+<p>
+  <%= link_to 'De Enroll Student', [comment.article, comment],
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+</p>
